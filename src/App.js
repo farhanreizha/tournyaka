@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Navigation, Footer, Carousels, Testimonial, About, Event } from './components'
+import './App.scss'
+import { NewPassword } from './Page'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navigation />
+      <Carousels />
+      <div className='d-flex flex-column gap-5'>
+        <Testimonial />
+        <About />
+        <Event />
+        <Footer />
+      </div>
+      {/* newPassword ini pisah aja */}
+      <NewPassword />
+    </>
+  )
 }
 
-export default App;
+export default App
